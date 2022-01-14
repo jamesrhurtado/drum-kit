@@ -12,8 +12,9 @@ window.addEventListener('keydown', function(e) {
 });
 
 function removeTransition(e){
-    if(e.propertyName != 'transition' ) return
-    console.log(e.properyName)
+    //this is key because it was the last called
+    if(e.propertyName != 'transform' ) return //skip if it is not transform
+    this.classList.remove('playing')
 }
 
 const keys = document.querySelectorAll('.key')
